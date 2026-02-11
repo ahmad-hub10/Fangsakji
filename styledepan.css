@@ -1,0 +1,94 @@
+body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            overflow: hidden;
+            /* Perpaduan warna yang diminta dengan tone lebih soft */
+            background: linear-gradient(125deg, #000000, #4b0000, #003300, #001a33, #ffffff, #000000);
+            background-size: 300% 300%;
+            animation: meshGradient 15s ease infinite;
+        }
+
+        @keyframes meshGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 2. Kartu Glassmorphism */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 50px 30px;
+            text-align: center;
+            max-width: 450px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            /* Animasi kartu melayang pelan */
+            animation: floatCard 6s ease-in-out infinite;
+        }
+
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* 3. Animasi Kata-kata Gerak */
+        .typing-text {
+            color: #fff;
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid #3b82f6;
+            width: 0;
+            margin: 0 auto;
+            animation: typing 4s steps(30) infinite alternate, blink 0.5s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: #3b82f6; }
+        }
+
+        .description {
+            color: rgba(255,255,255,0.8);
+            margin-top: 20px;
+            line-height: 1.6;
+            /* Animasi teks muncul perlahan */
+            animation: fadeIn 3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 4. Tombol Modern */
+        .btn {
+            margin-top: 30px;
+            padding: 12px 35px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid white;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: white;
+            color: black;
+            box-shadow: 0 0 20px rgba(255,255,255,0.4);
