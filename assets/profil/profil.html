@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil PPLG 2 | Ahmad Najib Ali</title>
+  <link rel="stylesheet" href="styleprofil.css">
+</head>
+<body>
+
+    <div class="fade-in">
+        <img src="imgfoto/ANA.jpg" alt="Ahmad Najib Ali" class="profile-img">
+        <h2>Ahmad Najib Ali</h2>
+        <p class="quote">"Ingin Membahagiakan Orang Tua dan Membanggakannya"</p>
+        <br>
+      <div class="wali-kelas">
+    <p>Wali Kelas X PPLG 2: <span>Asri Sri Sulastri, S.Kom</span></p>
+</div>
+<br>
+        <div class="table-container">
+            <h3 style="padding: 20px 0; margin: 0; border-bottom: 1px solid rgba(56, 189, 248, 0.2);">Data Siswa X PPLG 2</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th>NAMA </th>
+                        <th>L/P</th>
+                        <th>KELAS</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTable">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const students = [
+            ["1", "Arga", "L"], ["2", "Ali", "L"], ["3", "Aliya", "P"], ["4", "Alvi", "L"],
+            ["5", "Billy", "L"], ["6", "Debi", "P"], ["7", "Farhan A.K", "L"], ["8", "Galang", "L"],
+            ["9", "Herlina", "P"], ["10", "Ichsan", "L"], ["11", "Ira", "P"], ["12", "Trias", "L"],
+            ["13", "Al-zamzami", "L"], ["14", "Ibrahim", "L"], ["15", "Melati", "P"], ["16", "Syaehan", "L"],
+            ["17", "Akmal", "L"], ["18", "Irgi", "L"], ["19", "Nurul Akbar", "L"], ["20", "M.Farhan", "L"],
+            ["21", "Haerul Akbar", "L"], ["22", "Nouval", "L"], ["23", "Nadia", "P"], ["24", "Nirwan", "L"],
+            ["25", "Novita", "P"], ["26", "Rafca", "L"], ["27", "Raisya", "P"], ["28", "Reihan", "L"],
+            ["29", "Riki", "L"], ["30", "Ripa", "L"], ["31", "Samira", "P"], ["32", "Gita", "P"],
+            ["33", "Iqfa", "P"], ["34", "Nuraeni", "P"], ["35", "Sri", "P"], ["36", "Ulpa", "P"], ["37", "Zahra", "P"]
+        ];
+
+        const tableBody = document.getElementById('studentTable');
+        
+        students.forEach(s => {
+            let row = `<tr>
+                <td>${s[0]}</td>
+                <td style="text-align: left; padding-left: 30px;">${s[1]}</td>
+                <td><span class="badge ${s[2].toLowerCase()}">${s[2]}</span></td>
+                <td>X PPLG 2</td>
+            </tr>`;
+            tableBody.innerHTML += row;
+        });
+    </script>
+
+</body>
+</html>
